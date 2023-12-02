@@ -5,7 +5,7 @@
     <input v-model="username" type="text" id="username" name="username" placeholder="Ingresa tu nombre de usuario" autocomplete="off" required />
     <label for="password">Contraseña</label>
     <input v-model="password" type="password" id="password" name="password" placeholder="Ingresa tu contraseña" autocomplete="off" required />
-    <a class="forgot" href="#">¿Olvidaste tu contraseña?</a>
+    <router-link to="/recuperarcontraseña" class="forgot">¿Olvidaste tu contraseña?</router-link>
     <router-link to="/registro" class="register">Crear cuenta</router-link>
     <input type="submit" name="submit" value="Iniciar sesión" />
   </form>
