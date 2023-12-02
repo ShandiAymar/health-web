@@ -1,19 +1,20 @@
-
+import LoginForm from 'components/auth/LoginForm.vue';
+import RegisterForm from 'components/auth/RegisterForm.vue';
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
-    ]
+      { path: '', component: () => import('pages/IndexPage.vue') },
+      { path: '/iniciarsesion', component: LoginForm },
+      { path: '/registro', component: RegisterForm },
+    ],
   },
 
-  // Always leave this as last one,
-  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue')
-  }
-]
+    component: () => import('pages/ErrorNotFound.vue'),
+  },
+];
 
-export default routes
+export default routes;
